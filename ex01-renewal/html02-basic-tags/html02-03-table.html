@@ -11,6 +11,34 @@
 
     <!-- 기본 테이블 연습 -->
 
+    <table border="1">
+        <caption>성적표</caption>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>민지</td>
+                <td>20</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>철수</td>
+                <td>23</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>평균</td>
+            <td>21.5</td>
+            <td>95</td>
+        </tfoot>
+    </table>
+
     <h2>열과 행의 확장</h2>
     <ul>
         <li>colspan: 열 확장</li>
@@ -18,6 +46,23 @@
     </ul>
 
     <!-- 열과 행 확장 연습 -->
+    <table border="1">
+        <tr>
+            <td rowspan="2">(1, 1)</td>
+            <td colspan="2">(1, 2)</td>
+        </tr>
+        <tr>
+            <td>(2, 2)</td>
+            <td>(2, 3)</td>
+        </tr>
+        <tr>
+            <td>(3, 1)</td>
+            <td rowspan="2" colspan="2">(3, 2)</td>
+        </tr>
+        <tr>
+            <td>(4, 1)</td>
+        </tr>
+    </table>
 </body>
 
 </html>
