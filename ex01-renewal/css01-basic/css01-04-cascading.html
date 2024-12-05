@@ -2,11 +2,31 @@
 <html>
 
 <head>
+
+    <!-- css 적용 우선순위
+     종류별 적용 우선순위
+        0. important -> 가급적 쓰지 않기
+        1. inline-css
+        2. page-css
+        3. external-css
+        4. browser default
+
+    나중에 정의된 css가 이전에 정의된 css를 덮어 쓴다
+    -->
+
     <title>What does Cascading means?</title>
+    <link rel="stylesheet" href="../css/css01-external.css"/>
+    <!-- page css-->
+     <style>
+        h1 {
+            color: white;;
+        }
+     </style>
+     
 </head>
 
 <body>
-    <h1>Hello, External CSS!</h1>
+    <h1 style="color: aqua;" >Hello, External CSS!</h1>
     <p>This paragraph is styled with external CSS.</p>
 </body>
 

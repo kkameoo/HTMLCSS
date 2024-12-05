@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+
+<head>
+    <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+    <title>인터넷 개론</title>
+    <!-- 스타일시트자리 -->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr th {
+            background-color: gainsboro;
+            width: 450px;
+        }
+
+        tr th.speed {
+            width: 250px;
+        }
+
+        tr td.speed {
+            display: flex;
+            justify-content: end;
+            border-right: none;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        tr td.speed#a {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    목차
+    <ol>
+        <li><a href="/hw01-html/ex01.html">정의와 역사</a></li>
+        <li><a href="/hw01-html/ex02.html">특징과 영향</a></li>
+        <li><a href="/hw01-html/ex03.html">국가별 속도</a></li>
+    </ol>
+    <a href="/hw01-html/ex04.html">메일링 리스트 가입</a>
+    <hr />
+    <h1>인터넷 개론</h1>
+    </br>
+    </br>
+    <h2>5.주요 국가별 속도</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>국가명</th>
+                <th class="speed">속도(단위:Mb/초)</th>
+            </tr>
+        </thead>
+
+        <body>
+            <tr>
+                <td>
+                    <a href="https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD" target="_blank">
+                        <img src="flagImg/Korea.jpg" /> 대한민국
+                    </a>
+                </td>
+                <td class="speed" id="a">20.97</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://ko.wikipedia.org/wiki/%EC%9D%BC%EB%B3%B8" target="_blank">
+                        <img src="flagImg/Japan.jpg" />일본
+                    </a>
+                </td>
+                <td class="speed">15.78</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://ko.wikipedia.org/wiki/%EC%98%AC%EB%9E%80%EB%93%9C_%EC%A0%9C%EB%8F%84"
+                        target="_blank">
+                        <img src="flagImg/Aland.jpg" />올란드제도
+                    </a>
+                </td>
+                <td class="speed">14.96</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://ko.wikipedia.org/wiki/%EB%A6%AC%ED%88%AC%EC%95%84%EB%8B%88%EC%95%84"
+                        target="_blank">
+                        <img src="flagImg/Lithuania.jpg" />리투아니아
+                    </a>
+                </td>
+                <td class="speed">13.12</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://ko.wikipedia.org/wiki/%EC%8A%A4%EC%9B%A8%EB%8D%B4" target="_blank">
+                        <img src="flagImg/Sweden.jpg" />스웨덴
+                    </a>
+                </td>
+                <td class="speed">12.99</td>
+            </tr>
+        </body>
+    </table>
+</body>
+
+</html>

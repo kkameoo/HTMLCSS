@@ -3,7 +3,48 @@
 
 <head>
     <title>CSS 선택자 예제</title>
+    <style>
+        * {
+            color: grey;
+        }
+
+        /* 태그 선택자   */
+        h1, h2, h3, h4, h5, h6 {
+            color: darkcyan;
+        }
+        
+        /* 아이디 선택자 */
+        #apple {
+            color: red;
+        }
+
+        #banana {
+            color : yellow;
+        }
+
+        #orange {
+            color: orange;
+        }
+        #grape {
+            color: purple;
+        }
+
+        /* 클래스 선택자 */
+        .selected {
+            text-decoration: underline;
+        }
+
+        /* 부여한 속성의 초기화 */
+        li {
+            background-color: black;
+        }
+
+        li {
+            background-color: initial;
+        }
+        </style>
 </head>
+
 
 <body>
     <h1>기본 선택자</h1>

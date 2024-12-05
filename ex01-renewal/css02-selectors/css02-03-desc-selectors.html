@@ -3,6 +3,22 @@
 
 <head>
     <title>CSS 자식 선택자와 후손 선택자 실습</title>
+
+    <style>
+        div, p {
+            border: 1px solid red;
+            margin: 5px;
+        }
+        /* 자식 선택자: 후손 중에서 바로 아래 위치한 요소들 */
+        .parent > p {
+            color: red;
+        }
+
+        /* 후손 선택자 : 하위에 있는 요소들 */
+        .parent p {
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>

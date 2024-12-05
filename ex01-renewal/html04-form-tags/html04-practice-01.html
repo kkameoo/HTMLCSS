@@ -11,6 +11,67 @@
     <p>앞서 학습한 폼 관련 태그를 이용하여 가입 폼을 작성해 봅시다.</p>
     <p>비즈니스를 운영한다는 생각으로 서비스를 구상해 보고, 해당 비즈니스 모델에 적합한 입력 항목을 선정, 가입 폼을 작성해 봅니다.</p>
 
-</body>
+    <form name="registerForm" action="#" method="post">
+        <fieldset>
+            <legend>비트코인 거래소</legend>
+            <label for="username">아이디</label>
+            <input type="text" id="username" name="username" required /><br/><br/>
+            <label for="email">이메일</label>
+            <input type="text" id="email" name="email" required /><br/><br/>
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" required /><br/><br/>
+            <label for="password_confirm">비밀번호 확인</label>
+            <input type="password" id="password_confirm" name="password_confirm" required/><br/><br/>
+            <label for="phone_number">전화번호</label>
+            <input type="text" id="phone_number" name="phone_number" required/><br/><br/>
 
+            <label for="sex">성별</label>
+            <select id="sex" name="sex">
+                <option value="male" selected>남성</option>
+                <option value="female">여성</option>
+            </select><br/><br/>
+            
+            <label for="account">계좌</label>
+            <select id="account" name="account">
+                <option value="k" selected>국민은행</option>
+                <option value="s">신한은행</option>
+                <option value="n">농협은행</option>
+                <option value="u">우리은행</option>
+                <option value="sg">새마을금고</option>
+            </select><br/>
+            
+            <label for="account_number">계좌번호</label>
+            <input type="text" id="account_number" name="account_number" required /><br/><br/>
+            
+            <label>선호 코인(설문조사)</label><br/>
+            <input type="checkbox" id="xrp" name="favorite" value="x" />
+            <label for="xrp">리플</label>
+            <input type="checkbox" id="sand" name="favorite" value="s" />
+            <label for="sand">샌드박스</label>
+            <input type="checkbox" id="eth" name="favorite" value="e" />
+            <label for="eth">이더리움</label>
+            <input type="checkbox" id="doge" name="favorite" value="d" />
+            <label for="doge">도지</label><br/><br/>
+            
+            <label>동의서 : 개인의 코인 거래는 본 회사에게 아무런 책임이 없다</label><br/>
+            <label for="agree">동의한다</label>
+            <input type="checkbox" id="agree" name="bool" value="agree" onclick="checkOnlyOne(this)"/>
+            <label for="not_agree">동의하지 않는다</label>
+            <input type="checkbox" id="not_agree" name="bool" value="not_agree" onclick="checkOnlyOne(this)" />
+            <br/><br/>
+
+            <input type="submit" value="입력" />
+        </fieldset>
+    </form>
+
+    <script>
+        function checkOnlyOne(element) {
+            const checkboxes = document.getElementsByName("bool");
+            checkboxes.forEach((cb) => {
+                cb.checked = false;
+        })
+        element.checked = true;
+        }
+    </script>
+</body>
 </html>

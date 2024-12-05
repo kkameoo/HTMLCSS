@@ -3,6 +3,31 @@
 
 <head>
     <title>CSS 속성 선택자 실습</title>
+    <style>
+        /* href속성을 가진 모든 태그*/
+        [href] {
+            color: green;
+        }
+
+        /* href 속성이 특정 조건을 만족하는 태그*/
+        /* href 속성이 http://로 시작하는 태그*/
+        a[href^="http://"] {
+            color: red;
+        }
+        /* href 속성이 /로 시작하는 a 태그 */
+        a[href^="/"] {
+            color: blue;
+        }
+
+        [type] {
+            border: 2px solid blue;
+        }
+
+        [type="button"] {
+            border: none;
+            background-color: yellow;
+        }
+    </style>
 </head>
 
 <body>
