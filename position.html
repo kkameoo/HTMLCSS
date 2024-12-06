@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션 예제</title>
+    <!-- HTML 요소의 좌표는 기본적으로 상대 좌표계(static) -->
+    <style>
+        .container {
+            border: 2px solid;
+            height: 300px;
+            margin-top: 50px;
+            /* 기준점 설정 */
+            position: relative;
+            /* overflow: hidden; */
+            overflow: scroll;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            /* 좌표계를 absolute로 변경 */
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: red;
+            left: 10px;
+            top: 10px;
+        }
+        .box:nth-child(2) {
+            background-color: green;
+            left: 50px;
+            top: 50px;
+            z-index: 10;
+        }
+        .box:nth-child(3) {
+            background-color: blue;
+            left: 90px;
+            top: 90px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
