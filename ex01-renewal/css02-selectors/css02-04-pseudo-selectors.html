@@ -3,6 +3,56 @@
 
 <head>
     <title>CSS 가상 클래스 실습</title>
+    <style>
+        /* 반응 선택자 */
+        /* 선언 순서에 유의 */
+        a:link {
+             /* a tag only */
+            color: green;
+        }
+
+        a:visited {
+             /* a tag only */
+            color: grey;
+        } 
+        a:hover {
+            color: orange;
+        }
+        a:active {
+            color: red;
+        }
+
+        /* 상태 선택자 */
+        input:focus {
+            background-color: lightblue;
+        }
+
+        input:disabled {
+            background-color: gray;
+        }
+
+        /* 인접 선택자 +를 사용 */
+        input[type="checkbox"]:checked + label {
+            font-weight: bold;
+        }
+
+        /* 구조 선택자 */
+        ul#list > li:nth-child(2n) {
+            color: green;
+        }
+
+        ul#list > li:nth-child(2n+1) {
+            color: lightcoral;
+        }
+
+        ul#list > li:first-child {
+            color: blue;
+        }
+
+        ul#list > li:last-child {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,8 +62,8 @@
     <a href="#">링크 (hover 실습)</a>
 
     <h2>상태 선택자 실습</h2>
-    <input type="text" placeholder="텍스트 입력 (focus 실습)">
-    <input type="text" placeholder="텍스트 입력 (disabled 실습)" disabled>
+    <input type="text" placeholder="텍스트 입력 (focus 실습)"/></br>
+    <input type="text" placeholder="텍스트 입력 (disabled 실습)" disabled/></br>
     <input type="checkbox" id="checkbox">
     <label for="checkbox">체크박스 (checked 실습)</label>
 

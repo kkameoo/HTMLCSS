@@ -3,6 +3,55 @@
 
 <head>
     <title>CSS 색상 실습</title>
+    <style>
+        body {
+            background-color: yellow;
+        }
+
+        div {
+            padding: 10px;
+            margin: 10px;
+            color: white;
+        }
+        
+        /* 키워드 색상 */
+        
+        .keyword-color {
+            background-color: orange;
+        }
+        
+        /* HEX 색상 */
+        .hex-color {
+            background-color: #ffa000;
+        }
+
+        /* RGB 함수 색깔 */
+        .rgb-color {
+            background-color: rgb(255, 160, 0);
+        }
+
+        /* RGBA 함수 색상 */
+        /* A : 알파채널 (투명도) 
+        0(완전 투명) ~ 1.0(불투명)
+        */
+        .rgba-color {
+            background-color: rgba(255, 160, 0, 0.5);
+            background-color: #FFA0007F;
+        }
+
+        /* HSL 함수 색상
+        - HUE (색조) : 0도 ~ 360도
+        - Saturation (채도) : 0 ~ 100% (완전한)
+        - Lightness (명도) : 0(빛 없음) ~ 50%(정상 밝기) ~ 100%(완전한 밝기)
+        */
+
+        .hsl-color {
+            background-color: hsl(30, 100%, 50%);
+        }
+        .hsla-color {
+            background-color: hsla(30, 100%, 50%, 0.5);
+        }
+    </style>
 </head>
 
 <body>
