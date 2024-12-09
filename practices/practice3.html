@@ -4,6 +4,60 @@
 <meta charset="utf-8">
 <title>리스트를 이용한 메뉴 만들기</title>
 <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "맑은고딕", "돋움";
+        font-size: 0.75em;
+        color: #333;
+    }
+    div.tab-box {
+        width: 520px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        
+
+    }
+
+    ul {
+        
+        list-style: none;
+        display: flex;
+        height: 27px;
+        width: 480px;
+    }
+
+    ul li {
+        /* float: right; */
+        width: 100px;
+        height: 22px;
+        border: 1px solid #999;
+        background-color: #ccc;
+        text-align: center;
+        padding-top: 3px;
+        margin-right: 2px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        
+    }
+
+    ul li:first-child {
+        margin-left: -40px;
+    }
+
+    .tab-box div {
+        
+        border: 1px solid #ccc;
+        margin-top: -13px;
+        text-align: center;
+        line-height: 200px;
+        margin-right: 4px;
+    }
+
+    ul li.selected:hover {
+        background-color: bisque;
+    }
 
 </style>
 <script src="" type="text/javascript"></script>
