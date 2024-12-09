@@ -4,6 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS float 연습</title>
+    <style>
+        .menu {
+            list-style-type: none;
+            height: 30px;
+            margin: 6px;
+            padding: 6px;
+            background-color: lightgray;
+            /* float요소들을 감싸는 역할 */
+        }
+        .menu > li {
+             /* float: left; */
+             float: right;
+             width: 100px;
+             height: 30px;
+             text-align: center;
+             background-color: brown;
+             color: yellow;
+             margin: 5px;
+        }
+
+        .news-img {
+            float: left;
+            width: 50%;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 
 <body>
