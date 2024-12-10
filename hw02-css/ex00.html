@@ -22,12 +22,76 @@ css 수업을 위한 기본 문서
             }
             h3 {
                 font-size: 20px;
+                
             }
             h1 {
                 font-family: "궁서체";
                 font-size: 30px;
                 letter-spacing: 15px;
             }
+            i.internet {
+                
+                font-weight: bold;
+                color: blue;
+            }
+            i.infoSea {
+                font-weight: bold;
+                color: #FF0000;
+            }
+            h3.intHistory{
+                color: #00FF00;
+                text-decoration: underline;
+            }
+            span.milnet {
+                font-weight: bold;
+                color: #FF0000;
+
+            }
+            h3.intUser {
+                text-decoration: underline;
+            }
+            div.history {
+                background-color: #D9D9D9;
+                line-height: 30px;
+            }
+            span.justice {
+                font-weight: bold;
+                color: #00FF00;
+            }
+            i.act {
+                color: #0000FF;
+            }
+            span.characteristic {
+                font-weight: bold;
+                color: #FF0000;
+            }
+            ul li {
+                list-style: square;
+            }
+            ol li {
+                list-style: none;
+            }
+            tr th {
+                background-color: #C8EBFA;
+            }
+            tbody tr:hover {
+                background-color: #EDD3ED;
+            }
+
+            tr td:nth-child(2) {
+                text-align: end;
+            }
+            tr td:nth-child(2):before {
+                content: "약 ";
+            }
+            tr td:nth-child(2):after {
+                content: " (MB/초)";
+            }
+          
+            tr td a:hover, tr td a:focus {
+                color: #0000FF;
+            }
+            
          </style>
     </head>
 
@@ -45,17 +109,17 @@ css 수업을 위한 기본 문서
         <p>
             인터넷이란 이름은 1973년 TCP/IP를 정립한 빈튼 서프와 밥 간이 
             '네트워크의 네트워크'를 구현하여 모든 컴퓨터를 하나의 통신망 안에 
-            연결(International Network)하고자 하는 의도에서 이를 줄여 인터넷(Internet)이라고 
+            연결(International Network)하고자 하는 의도에서 이를 줄여 <i class="internet">인터넷(Internet)</i>이라고 
             처음 명명하였던 데 어원을 두고 있다.<br>
-            이후 인터넷은 "정보의 바다"라고 불리면서 컴퓨터가 서버와 클라이언트로 연결되어 
+            이후 인터넷은 <i class="infoSea">"정보의 바다"</i>라고 불리면서 컴퓨터가 서버와 클라이언트로 연결되어 
             TCP/IP를 이용해 정보를 주고 받게 되었다.
-         </p>
-
+        </p>
+        <div class="history">
         <h2>2. 역사</h2>
-        <h3>인터넷의 역사</h3>
+        <h3 class="intHistory">인터넷의 역사</h3>
         <p>
             인터넷의 유래는 1960~1970년대 미국 국방부 산하의 고등 연구국의 연구용 네트워크가
-            시초이며, 군사용 네트워크는 밀네트(MILNET)로 발전되었다. 
+            시초이며, 군사용 네트워크는 <span class="milnet">밀네트(MILNET)</span>로 발전되었다. 
         </p>
 
         <h3>대한민국 인터넷의 역사</h3>
@@ -64,7 +128,7 @@ css 수업을 위한 기본 문서
             한국전자기술연구소(현 ETRI) 사이에 구축한 네트워크 시스템이다. 
         </p>
 
-        <h3>인터넷 이용자 수</h3>
+        <h3 class="intUser">인터넷 이용자 수</h3>
         <p>
             2002년 2월에 전 세계 인터넷 이용자의 수는 5억 4420만 명에 이르렀는데, 
             북미 지역이 1억 8123만 명으로 가장 많았고, 그 다음이 유럽 지역으로 1억 7135만 명에 달했으며, 
@@ -72,19 +136,20 @@ css 수업을 위한 기본 문서
             2003년 6월에 대한민국의 인터넷 이용자수는 2861만 1000명이고, 2006년 12월에 
             초고속 인터넷 서비스 가입자는 1401만 1419명이었다.
         </p>
+        </div>
 
         <h2>3. 특징</h2>
         <ul>
             <li>
-                인터넷은 사람들의 '선한 측면'과 '작은 노력'을 컨텐츠로 집약하여 요약을 보여줄 가능성이 
+                인터넷은 사람들의 <span class="justice">'선한 측면'</span>과 '작은 노력'을 컨텐츠로 집약하여 요약을 보여줄 가능성이 
                 있는 기술이다.
             </li>
             <li>
-                인터넷은 지금까지는 사회의 소수 계층에게만 가능했던 행동(표현, 사회 공헌 등)과 전시를 
+                인터넷은 지금까지는 사회의 소수 계층에게만 가능했던 <i class="act">행동(표현, 사회 공헌 등)</i>과 전시를 
                 모든 사람에게 개방하는 기술이다.
             </li>
             <li>
-                인터넷은 올바른 정보활용을 통해 개인의 고유한 특성(개성, 지향성)을 발견해 내고 
+                인터넷은 올바른 정보활용을 통해 개인의 고유한 <span class="characteristic">특성(개성, 지향성)</span>을 발견해 내고 
                 증폭시키는 데에 매우 유효적절한 기술이다.
             </li>
         </ul>
