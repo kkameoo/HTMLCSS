@@ -3,6 +3,53 @@
 
 <head>
     <title>가입 폼 실습</title>
+    <script>
+        function validateForm() {
+            // form 확인
+            const form = document.forms["registerForm"];
+            // const form = document.registerForm;
+            
+            const username = form.username;
+            const email = form.email;
+            const password = form.password;
+            const confirm_password = form.confirm_password;
+            const favorites = form.favorite;
+
+            if (!(username.value.length >= 3 && username.value.length <= 8)) {
+                alert("사용자 이름은 3자 이상 8자 이하 입니다.");
+                username.focus();
+                return false;
+            }
+            if (email.value.length < 20) {
+                alert("이메일은 20자 이상입니다.")
+                email.focus();
+                return false;
+            }
+            if (!(password.value.length >= 4 && password.value.length <= 10)) {
+                alert("비밀번호는 4자 이상 10자 이하입니다.");
+                password.focus();
+                return false;
+            }
+            if (password.value !== confirm_password.value) {
+                alert("비밀번호를 확인해 주세요.");
+                confirm_password.focus();
+                return false;
+            }
+            let favoriteSelected = false;
+            for (let i = 0; i < favorites.length; i++){
+                if (favorites[i].checked) {
+                    favoriteSelected = true;
+                    break;
+                }
+            }
+            if(!favoriteSelected) {
+                alert("선호 음료를 최소 1개 선택해 주세요.")
+                return false;
+            }
+            // 모든 검증 통과
+            return true;
+        }
+    </script>
 </head>
 
 <body>
@@ -14,22 +61,21 @@
     <!-- mehtod: 데이터 전송 방식(GET OR POST, default : GET)
      action : 데이터를 전송 받아 처리할 서버의 페이지 (default: 현재 페이지)
      label for= "username" 이랑 id= "username"은 이어져있음-->
-    <form name="registerForm" action="#" method="post">
+    <form name="registerForm" action="#" method="post" onsubmit="return validateForm()">
         <fieldset>
             <legend>회원 정보</legend>
 
             <label for="username">사용자 이름</label>
-            <input type="text" id="username" name="username" placeholder="사용자 이름을 입력하세요"
-            required />
+            <input type="text" id="username" name="username" placeholder="사용자 이름을 입력하세요"/>
 
             <label for="email">이메일</label>
-            <input type="text" id="email" name="email" placeholder="이메일을 입력하세요" required />
+            <input type="text" id="email" name="email" placeholder="이메일을 입력하세요" />
             <br/>
             
             <label for="password">비밀번호</label>
-            <input type="password" id="password" name="password" required/>
+            <input type="password" id="password" name="password" />
             <label>비밀번호 확인
-                <input type="password" name="confirm_password" required />
+                <input type="password" name="confirm_password"  />
             </label><br/>
 
             <label>성별</label>
